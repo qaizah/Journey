@@ -23,12 +23,11 @@
 				To : 'MailTrap',
 				From : "Landing Page",
 				Subject : "Journey",
-				Body : "Another one bites the dust",
+				Body : document.getElementById("mail").value,
 			})
 			.then(function(message){
-				alert("Success");
-				/*document.getElementById("btn").value = "Success!";
-				document.getElementById("btn").enabled = false;*/
+				document.getElementById("btn").value = "Success!";
+				document.getElementById("btn").enabled = false;
 			});
 			
 		}
