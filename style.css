@@ -1,0 +1,169 @@
+@font-face {
+	font-family: "Code";
+	font-weight: normal;
+	font-display: swap;
+	src: url("fonts/codel.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Code";
+	font-weight: bold;
+	font-display: swap;
+	src: url("fonts/codeb.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Monad";
+	font-weight: normal;
+	font-display: swap;
+	src: url("fonts/Monad.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Stephanie";
+	font-weight: normal;
+	font-display: swap;
+	src: url("fonts/Stephanie.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-weight: normal;
+	font-display: swap;
+	src: url("fonts/Raleway.ttf") format("truetype");
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 30% 35% 35%;
+	
+	overflow: hidden;
+	background: url(https://github.com/supahfunk/gradientwaves-svg/blob/master/dist/img/bg-gradient-wave.png?raw=true) repeat center/cover;
+	
+}
+
+svg {
+	
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 5;
+  
+	width: 100vw;
+	height: 100vh;
+	
+}
+
+p.title {
+	
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	justify-self: center;
+	align-self: center;	
+				
+	font-family: "Monad";
+	font-size: 6vh;
+	
+	z-index:1;
+}
+
+.text {
+	
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	justify-self: center;
+	align-self: center;
+
+	margin-bottom: 2%;
+	
+	text-align: center;
+	
+	font-family: "Raleway";
+	color: orange;
+
+	z-index:1;
+	
+}
+
+.desc {
+	font-size: 2.5vh;
+}
+
+.desc2 {
+	font-size: 2vh;
+}
+
+p.footer {
+	font-size: 2.5vh;
+}
+
+.form {
+	
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	justify-self: center;
+	align-self: start;
+	
+	margin-top: 1%;
+	
+	font-family: "Raleway";
+	color: orange;
+
+	z-index:1;
+	
+}
+
+.mail {
+		
+	width: 12vw;
+	height: 3vh;
+	background-color: #202225;
+	border-radius: 25px;
+	color: orange;
+	font-family: 'Raleway';
+	font-size: 1.3vh;
+	
+	border: 1px solid orange;
+	outline: none;	
+	text-align: center;	
+
+}
+
+.btn {
+	
+	width: 12vw;
+	height: 3vh;
+	background-color: #202225;
+	border-radius: 25px;
+	color: orange;
+	font-family: 'Raleway';
+	font-size: 1.3vh;
+	
+	border: 1px solid orange;
+	outline: none;	
+	text-align: center;	
+	
+}
+
+.btn:hover {
+  background-color: orange;
+  color: black;
+}
+
+.btn:active {
+	transform: translateY(2px);
+}
+
