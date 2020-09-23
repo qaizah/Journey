@@ -20,12 +20,13 @@
 				Host: "smtp.mailtrap.io",
 				Username : "63a313159b2938",
 				Password : "a607c5261d56bc",
-				To : 'MailTrap',
-				From : "Landing Page",
+				To : 'MailTrap@example.com',
+				From : "LandingPage@example.com",
 				Subject : "Journey",
 				Body : document.getElementById("mail").value,
 			})
 			.then(function(message){
+			alert("ddd");
 				document.getElementById("btn").value = "Success!";
 				document.getElementById("btn").enabled = false;
 			});
