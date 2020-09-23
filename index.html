@@ -26,8 +26,8 @@
 				Body : document.getElementById("mail").value,
 			})
 			.then(function(message){
-				document.getElementById("btn").innerHTML = "Success!";
-				document.getElementById("btn").disabled = true;
+				document.getElementById("mail").value = "Success!";
+				document.getElementById("btn").outerHTML = "";
 			});
 			
 		}
