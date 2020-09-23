@@ -15,7 +15,7 @@
 	<script type="text/javascript">
 	
 		function sendEmail() {
-		alert("ajaaa");
+		
 			Email.send({
 				Host: "smtp.gmail.com",
 				Username : "mpettas0@gmail.com",
@@ -26,8 +26,9 @@
 				Body : "Another one bites the dust",
 			})
 			.then(function(message){
-				document.getElementById("btn").value = "Success!";
-				document.getElementById("btn").enabled = false;
+				alert("Success");
+				/*document.getElementById("btn").value = "Success!";
+				document.getElementById("btn").enabled = false;*/
 			});
 			
 		}
