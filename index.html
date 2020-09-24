@@ -21,7 +21,7 @@
 	
 		function sendEmail() {
 		
-			validateEmail(document.getElementById("mail").value){
+			if(validateEmail(document.getElementById("mail").value)){
 		
 				Email.send({
 					Host: "smtp.mailtrap.io",
