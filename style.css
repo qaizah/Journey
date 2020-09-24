@@ -68,6 +68,17 @@ svg {
 	
 }
 
+.forChrome {
+    position:   absolute;
+    top:        10px;
+    left:       10px;
+    text-align: left;
+	color: black;
+	font-family: "PoiretOne";
+	font-size: 1.5vh;
+	font-weight: bold;
+}
+
 p.title {
 	
 	grid-column-start: 1;
