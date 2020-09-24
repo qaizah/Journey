@@ -2,7 +2,7 @@
 SETTINGS
 --------------------*/
 let settings = {
-    amplitudeX: 150,
+    amplitudeX: 300,
     amplitudeY: 20,
     lines: 50,
     hueStartColor: 70,
