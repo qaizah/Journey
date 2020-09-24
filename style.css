@@ -43,6 +43,7 @@
 *{
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
@@ -85,7 +86,7 @@ p.title {
 	z-index:1;
 }
 
-.text {
+.textD, .textM {
 	
 	grid-column-start: 1;
 	grid-column-end: 2;
@@ -103,6 +104,14 @@ p.title {
 	
 	z-index:1;
 	
+}
+
+.textD {	
+	display: inline-block;	
+}
+
+.textM {	
+	display: none;	
 }
 
 .color {
@@ -197,6 +206,7 @@ p.title {
 	transform: translateY(2px);
 }
 
+
 @media screen and (max-width: 900px) {
 
 	.desc {
@@ -205,6 +215,14 @@ p.title {
 
 	.desc2 {
 		font-size: 2vh;
+	}
+	
+	.textD {
+		display: none;
+	}
+
+	.textM {
+		display: inline-block;
 	}
 
 }
