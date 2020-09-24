@@ -14,44 +14,14 @@
 	
 	<script src="https://smtpjs.com/v3/smtp.js"></script> 
 	
-	<script type="text/javascript">
-	
-		function validateEmail(email) {
-			const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-			return re.test(email);
-		}
-	
-		function sendEmail() {
-		
-			if(validateEmail(document.getElementById("mail").value)){
-		
-				Email.send({
-					SecureToken : "f7e43531-04f7-47f6-8b63-eb4f37c5d9a9",
-					To : 'MailTrap@example.com',
-					From : "LandingPage@example.com",
-					Subject : "Journey",
-					Body : document.getElementById("mail").value,
-				})
-				.then(function(message){
-					document.getElementById("mail").value = "Success!";
-					document.getElementById("btn").outerHTML = "";
-				});
-			
-			}else{			
-				alert("Please enter a valid email");			
-			}
-			
-		}
-		
-	</script>
-	
 </head>
 
 <body>
 
 	<svg id="svg"></svg>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js'></script><script  src="./script.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js'></script>
+	<script  src="./script.js"></script>
 
 	<p class="title">Welcome to Journey</p> 
 
