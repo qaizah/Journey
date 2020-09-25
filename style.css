@@ -156,7 +156,7 @@ p.title {
 	font-size: 2.5vh;
 }
 
-.form {
+.formD, .formM {
 	
 	grid-column-start: 1;
 	grid-column-end: 2;
@@ -175,6 +175,15 @@ p.title {
 	z-index:1;
 	
 }
+
+.formD {	
+	display: inline-block;	
+}
+
+.formM {	
+	display: none;	
+}
+
 
 .mail {
 		
@@ -232,6 +241,14 @@ p.title {
 	}
 
 	.textM {
+		display: inline-block;
+	}
+	
+	.formD {
+		display: none;
+	}
+
+	.formM {
 		display: inline-block;
 	}
 
