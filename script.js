@@ -297,19 +297,31 @@ function sendEmail() {
 		var x = document.getElementById("mailD");
 		var y = document.getElementById("btnD");
 	}
+	
+	var btn = y.outerHTML;
+	y.outerHTML = "";
+	
+	var mail = x.value;
+	x.value = "Please wait...";
+	
+	if(validateEmail(mail)){
 				
-	if(validateEmail(x.value)){
-		
 		Email.send({
 			SecureToken : "f7e43531-04f7-47f6-8b63-eb4f37c5d9a9",
 			To : 'MailTrap@example.com',
 			From : "LandingPage@example.com",
 			Subject : "Journey",
-			Body : x.value,
+			Body : mail,
 		})
 		.then(function(message){
-			x.value = "Success!";
-			y.outerHTML = "";
+			
+			if(message == "OK"){
+				x.value = "Thank you!";
+			}else{
+				x.value = "Please reload and try again";
+				y.outerHTML = btn;
+			}
+			
 		});
 			
 	}else{			
