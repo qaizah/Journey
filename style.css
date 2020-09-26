@@ -113,8 +113,19 @@ svg {
 				
 	font-family: "Monad";
 	font-size: 1.1vmax;
+	
+	animation-name: example;
+	animation-duration: 2s;
 		
 	z-index:1;
+}
+
+@keyframes example {
+  0%   {opacity: 0; transform : translateY(-1em);}
+  25%  {opacity: 0.25;}
+  50%  {opacity: 0.5;}
+  75%  {opacity: 0.75;}
+  100% {opacity: 1;}
 }
 
 .desktop {
