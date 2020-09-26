@@ -281,31 +281,19 @@ function randomize(){
     datgui();
 }
 
-
-
-function validateEmail(email) {
-	const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(email);
-}
 	
 function sendEmail() {
 		
-	if(validateEmail(document.getElementById("mail").value)){
-		
-		Email.send({
-			SecureToken : "f7e43531-04f7-47f6-8b63-eb4f37c5d9a9",
-			To : 'MailTrap@example.com',
-			From : "LandingPage@example.com",
-			Subject : "Journey",
-			Body : document.getElementById("mail").value,
-		})
-		.then(function(message){
-			document.getElementById("mail").value = "Success!";
-			document.getElementById("btn").outerHTML = "";
-		});
-			
-	}else{			
-		alert("Please enter a valid email");			
-	}
+	Email.send({
+		SecureToken : "f7e43531-04f7-47f6-8b63-eb4f37c5d9a9",
+		To : 'MailTrap@example.com',
+		From : "LandingPage@example.com",
+		Subject : "Journey",
+		Body : document.getElementById("mail").value,
+	})
+	.then(function(message){
+		document.getElementById("mail").value = "Success!";
+		document.getElementById("btn").outerHTML = "";
+	});
 			
 }
