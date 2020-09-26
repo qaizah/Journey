@@ -298,11 +298,12 @@ function sendEmail() {
 		var y = document.getElementById("btnD");
 	}
 	
-	var btn = y.outerHTML;
-	y.outerHTML = "";
+	y.style.display = "none";
+	x.readOnly = true;
 	
 	var mail = x.value;
-	x.value = "Please wait...";
+	x.value = "";
+	x.placeholder = "Please wait...";
 	
 	if(validateEmail(mail)){
 				
@@ -314,18 +315,23 @@ function sendEmail() {
 			Body : mail,
 		})
 		.then(function(message){
-			
+						
 			if(message == "OK"){
-				x.value = "Thank you!";
+				x.value = "Thank you!";				
 			}else{
 				x.value = "Please reload and try again";
-				y.outerHTML = btn;
+				y.style.display = "inline-block";
+				x.readOnly = false;
 			}
 			
 		});
 			
 	}else{			
-		alert("Please enter a valid email");			
+		alert("Please enter a valid email");
+		x.value = "";		
+		x.placeholder = "E-mail";
+		y.style.display = "inline-block";
+		x.readOnly = false;
 	}
 			
 }
