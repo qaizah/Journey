@@ -49,10 +49,10 @@ body {
 	
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 25% 32% 23%;
+	grid-template-rows: 1fr 1fr 1fr;
 	
 	overflow: hidden;
-	background: url(https://github.com/supahfunk/gradientwaves-svg/blob/master/dist/img/bg-gradient-wave.png?raw=true) repeat center/cover;
+	background: url(bg.png) repeat center/cover;
 	
 }
 
@@ -61,17 +61,19 @@ svg {
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 1;
-	grid-row-end: 5;
+	grid-row-end: 4;
   
 	width: 100vw;
 	height: 100vh;
 	
+	z-index:0;
+	
 }
 
 .forChrome {
-    position:   absolute;
-    top:        10px;
-    left:       10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
     text-align: left;
 	color: black;
 	font-family: "PoiretOne";
@@ -79,7 +81,7 @@ svg {
 	font-weight: bold;
 }
 
-p.title {
+.title {
 	
 	grid-column-start: 1;
 	grid-column-end: 2;
@@ -96,99 +98,112 @@ p.title {
 	z-index:1;
 }
 
-.textD, .textM {
+.subtitle {
+	
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	justify-self: center;
+	align-self: center;	
+				
+	text-align: center;
+				
+	font-family: "Monad";
+	font-size: 1.1vmax;
+		
+	z-index:1;
+}
+
+.desktop {
 	
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 2;
 	grid-row-end: 3;
-	justify-self: center;
-	align-self: center;
-	
-	text-align: center;
-	
-	font-family: "PoiretOne";
-	color: orange;
 
-	width: 80%;
+	justify-self: stretch;
+	align-self: stretch;
+
+	height: 15vw;
+	
+	border-top: 1px solid orange;
+	border-bottom: 1px solid orange;
+
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 100%;	
 	
 	z-index:1;
-	
+
 }
 
-.textD {	
-	display: inline-block;	
-}
-
-.textM {	
-	display: none;	
+.mobile {	
+	display: none;
 }
 
 .color {
 	
 	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
 	
-	width: 100%;
-	height: 100%;
-	
-	border-top: 1.5px solid orange;
-	border-bottom: 1.5px solid orange;
+	justify-self: stretch;
 	
 	background-color: black;
 	
 	opacity: 0.6;
 	
+	z-index:2;
+		
 }
 
-.desc {
-	font-size: 2.5vh;
-}
-
-.desc2 {
-	font-size: 2.5vh;
-	line-height: 80%;
-}
-
-.footer {
-	font-size: 2.5vh;
-}
-
-.formD, .formM {
+.text {
 	
 	grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 3;
-	grid-row-end: 4;
-	justify-self: center;
+	grid-row-start: 1;
+	grid-row-end: 2;
+		
+	justify-self: stretch;
+	align-self: center;
+		
+	text-align: center;
+		
+	font-family: "PoiretOne";
+	color: orange;
+
+	border-right: 1px solid orange;
+	
+	z-index:3;
+	
+}
+
+.form {
+	
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	
+	justify-self: stretch;
 	align-self: center;
 	
-	margin-top: 3%;
-	width: 80%;
-	
+	text-align: center;
+		
 	font-family: "PoiretOne";
 	color: orange;
 	text-align: center;
-
-	z-index:1;
+	
+	z-index:3;
 	
 }
 
-.formD {	
-	display: inline-block;	
-}
-
-.formM {	
-	display: none;	
-}
-
-
 .mail {
 		
-	width: 20vh;
-	height: 3vh;
+	width: 15vw;
+	height: 1.6vw;
 	background-color: #202225;
 	border-radius: 25px;
 	color: orange;
@@ -203,8 +218,8 @@ p.title {
 
 .btn {
 	
-	width: 20vh;
-	height: 3vh;
+	width: 15vw;
+	height: 1.6vw;
 	background-color: #202225;
 	border-radius: 25px;
 	color: orange;
@@ -225,31 +240,71 @@ p.title {
 	transform: translateY(2px);
 }
 
+@media (orientation: portrait) {
 
-@media screen and (max-width: 900px) {
-
-	.desc {
-		font-size: 2vh;
-	}
-
-	.desc2 {
-		font-size: 2vh;
-	}
-	
-	.textD {
+	.desktop {
 		display: none;
 	}
 
-	.textM {
-		display: inline-block;
+	.mobile {
+		
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 2;
+		grid-row-end: 4;
+		
+		justify-self: stretch;
+		
+		display: inline-block;	
+		
+		border-top: 1px solid orange;
+		border-bottom: 1px solid orange;
+			
+		z-index:1;
+		
 	}
 	
-	.formD {
-		display: none;
+	.title {
+		width: 80%;
+	}
+	
+	.subtitle {
+		font-size: 1.4vmax;
+		font-weight: bold;
+	}	
+
+	.color {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
 	}
 
-	.formM {
-		display: inline-block;
+	.text {
+		margin: auto;
+		margin-top: 5%;
+		width: 90%;
+		border-right: 0px;	
+		text-align: center;		
+	}
+	
+	.form {
+		margin: auto;
+		margin-top: 10%;
+		width: 80%;
+		text-align: center;	
+	}
+	
+	.mail {
+		margin-top: 5%;
+		width: 50vw;
+		height: 7vw;
+	}
+
+	.btn {
+		margin-top: 2%;
+		width: 50vw;
+		height: 7vw;
 	}
 
 }
